@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>커피 추가</title>
+    </head>
+    <body>
+        <h1 th:text="${menu.id != null} ? '커피 추가' : '커피 수정' ">수정/추가</h1>
+
+        <form th:action="@{${menu.id != null} ? '/menu' : '/menu/update'} " th:object="${menu}" method="post">
+            <input type="hidden" th:field="*{id}">
+            <label>
+                이름: <input type="text" th:field="*{coffee}"><br>
+                용량: <input type="text" th:field="*{size}"><br>
+                가격: <input type="text" th:field="*{price}"><br>
+                설명: <input type="text" th:field="*{description}"><br>
+                차갑게: <input type="text" th:field="*{hotORice}"><br>
+                <button type="submit">저장</button>
+            </label>
+        </form>
+        <a th:href="@{/}">홈으로</a>
+    </body>
+</html>

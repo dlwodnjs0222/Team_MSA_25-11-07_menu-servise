@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <a th:href="@{/menu/new}">새로운 커피</a>
+
+        <hr>
+
+        <ul>
+            <li th:each="menu : ${menus}">
+                <a th:href="@{/menu/{id}(id=${menu.id})}">
+                    <span th:text="${menu.coffee}"></span>
+                </a>
+            </li>
+        </ul>
+    </body>
+</html>

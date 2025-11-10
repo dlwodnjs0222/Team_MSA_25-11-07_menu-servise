@@ -17,20 +17,11 @@ public class Menu {
 
     private String coffee;
 
-    private String tea;
+   private int size;
 
-    private String shake;
+   private String price;
 
-    private String ade;
+   private String description;
 
-    private String smoothie;
-
-    private String decaffeination;
-
-    private String drink;
-
-    private String newOne;
-
-    private String extra;
-
+   private Boolean hotORice;
 }

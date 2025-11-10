@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -18,48 +19,15 @@ public class MenuService {
         return menuRepository.findAll();
     }
 
-    public List<Menu> findByCoffee(String coffee) {
-        return menuRepository.findByName(coffee);
-    }
-
-    public List<Menu> findByTea(String tea) {
-        return menuRepository.findByName(tea);
-    }
-
-    public List<Menu> findByShake(String shake) {
-        return menuRepository.findByShake(shake);
-    }
-
-    public List<Menu> findByAde(String ade) {
-        return menuRepository.findByName(ade);
-    }
-
-    public List<Menu>  findBySmoothie(String smoothie) {
-        return menuRepository.findByName(smoothie);
-    }
-
-    public List<Menu> findByDrink(String drink) {
-        return menuRepository.findByName(drink);
-    }
-
-    public List<Menu> findByDecaffeination(String  decaffeination) {
-        return menuRepository.findByName(decaffeination);
-    }
-
-    public List<Menu> findByNewOne(String newOne) {
-        return menuRepository.findByName(newOne);
-    }
-
-    public List<Menu> findByExtra(String extra) {
-        return menuRepository.findByName(extra);
+    public Optional<Menu> findById(Long id) {
+        return menuRepository.findById(id);
     }
 
     public Menu save(Menu menu) {
         return menuRepository.save(menu);
     }
 
-
-    public void delete(Menu menu) {
-        menuRepository.delete(menu);
+    public void deleteById(Long id) {
+        menuRepository.deleteById(id);
     }
 }
