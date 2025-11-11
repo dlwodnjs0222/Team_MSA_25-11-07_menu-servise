@@ -2,19 +2,85 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>coffee menu</title>
     </head>
     <body>
-        <a th:href="@{/menu/new}">새로운 커피</a>
+        <div id="web">
+            <div id="menu-header">
+                <header>
+                    <h1>coffee menu</h1>
+                    <div class="nav-list">
+                        <ul class="menu">
+                            <li>
+                                <a th:href="@{/}">coffee1</a>
+                                <div class="sub-menu">
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a th:href="@{/}">coffee2</a>
+                                <div class="sub-menu">
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a th:href="@{/}">coffee3</a>
+                                <div class="sub-menu">
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a th:href="@{/}">coffee4</a>
+                                <div class="sub-menu">
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a th:href="@{/}">coffee5</a>
+                                <div class="sub-menu">
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                    <a th:href="@{/}"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
 
-        <hr>
+            <div id="menu-body">
+                <div id="slide"></div>
+            </div>
 
-        <ul>
-            <li th:each="menu : ${menus}">
-                <a th:href="@{/menu/{id}(id=${menu.id})}">
-                    <span th:text="${menu.coffee}"></span>
-                </a>
-            </li>
-        </ul>
+            <div id="contents">
+                <div class="notice">
+                    <div class="tab-inner">
+                        <div class="tab1">
+                            <span>게시판</span>
+                            <a th:href="@{/}"></a>
+                            <a th:href="@{/}"></a>
+                            <a th:href="@{/}"></a>
+                            <a th:href="@{/}"></a>
+                            <a th:href="@{/}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
     </body>
 </html>

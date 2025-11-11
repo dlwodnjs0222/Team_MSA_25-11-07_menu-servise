@@ -10,5 +10,8 @@
         <p th:text="${menu.size}"></p>
         <p th:text="${menu.price}"></p>
         <p th:text="${menu.hotORice}"></p>
+
+        <a th:href="@{/menu/edit/{id}(id=${menu.id})}">수정</a>
+        <a th:href="@{/menu/del/{id}(id=${menu.id})}">삭제</a>
     </body>
 </html>
